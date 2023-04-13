@@ -1,0 +1,25 @@
+.splash-text {
+    font-size: 8em;
+}
+
+.prod-item-container {
+    height: 100%;
+    text-align: center;
+    font-size: 2em;
+}
+
+.prod-item {
+    width: 100%;
+    height: auto;
+}
+
+.center {
+    margin-top: 35%;
+    border: none;
+}
+
+.join-now {
+    font-size: 3em;
+    text-align: center;
+    background-color: teal;
+}

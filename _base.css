@@ -12,6 +12,29 @@ hr {
     padding-left: 10vw;
 }
 
+.center {
+    margin: auto;
+    width: 50%;
+}
+
+footer p {
+    text-align: right;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    padding-right: 2vw;
+}
+
+
+/* Flex divider */
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
 
 /* Navbar */
 

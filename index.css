@@ -51,14 +51,6 @@ nav {
     font-size: x-large;
 }
 
-.row {
-    display: flex;
-}
-
-.column {
-    flex: 50%;
-}
-
 .column-l {
     flex: 25%;
 }
@@ -99,11 +91,4 @@ nav {
 .btn-submit {
     width: 75%;
     height: 5vh;
-}
-
-footer p {
-    text-align: right;
-    padding-top: 4vh;
-    padding-bottom: 4vh;
-    padding-right: 2vw;
 }

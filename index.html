@@ -36,7 +36,7 @@
 
     <!-- Banner -->
     <section id="top-banner">
-        <img class="banner" src="assets/revou-banner.png" alt="revoU-banner" />
+        <img class="banner" src="assets/index/revou-banner.png" alt="revoU-banner" />
         <hr/>
     </section>
     <!-- Banner End -->
@@ -47,15 +47,15 @@
             <h1>Our Facilitation</h1>
             <ul class="facil">
                 <div class="facil-block">
-                    <img class="facil-img" src="assets/facil-1.png" />
+                    <img class="facil-img" src="assets/index/facil-1.png" />
                     <span class="facil-desc">Professional Teacher</span>
                 </div>
                 <div class="facil-block">
-                    <img class="facil-img" src="assets/facil-2.png" />
+                    <img class="facil-img" src="assets/index/facil-2.png" />
                     <span class="facil-desc">Sport Field</span>
                 </div>
                 <div class="facil-block">
-                    <img class="facil-img" src="assets/facil-3.png" />
+                    <img class="facil-img" src="assets/index/facil-3.png" />
                     <span class="facil-desc">Classroom</span>
                 </div>
             </ul>
@@ -97,7 +97,7 @@
                 <div class="column">
                     <div class="message-show">
                         <p>
-                            <b>Current time :</b>
+                            <b>Current time :<span id="sender-time"></span></b>
                             <br/>
                             <br/>
                             <b>Nama : <span id="sender-nama"></span></b>
@@ -128,6 +128,9 @@
 <script>
     var nama = prompt("Masukkan nama kamu");
     document.getElementById("nama-header").innerText = nama;
+
+    var today = new Date();
+    document.getElementById("sender-time").innerText = today;
 
     function validateForm() {
         var nama = document.forms['msg-form']['nama'].value;
