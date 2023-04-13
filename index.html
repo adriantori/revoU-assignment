@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="_base.css">
+    <link rel="stylesheet" href="index.css">
+    <title>RevoU Assignment</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul class="navbar">
+            <a href="index.html"><img class="navicon" src="assets/revou-icon.png" alt="revoU-icon" /></a>
+            <li class="navitem"><a href="message.html">Message Us</a></li>
+            <li class="navitem"><a href="achievement.html">Achievement</a></li>
+            <li class="navitem"><a href="profile.html">Our Profile</a></li>
+            <li class="navitem active"><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header -->
+    <section id="header">
+        <div class="container">
+            <div class="header">
+                <h2>Hi nama, Welcome To Website</h2>
+                <h5>Ini adalah website latihan pertama</h5>
+            </div>
+        </div>
+    </section>
+    <!-- Header End -->
+
+    <!-- Banner -->
+    <section id="top-banner">
+        <img class="banner" src="assets/revou-banner.png" alt="revoU-banner" />
+        <hr/>
+    </section>
+    <!-- Banner End -->
+
+    <!-- Facilitation -->
+    <section id="facilitation">
+        <div class="container">
+            <h1>Our Facilitation</h1>
+            <ul class="facil">
+                <div class="facil-block">
+                    <img class="facil-img" src="assets/facil-1.png" />
+                    <span class="facil-desc">Professional Teacher</span>
+                </div>
+                <div class="facil-block">
+                    <img class="facil-img" src="assets/facil-2.png" />
+                    <span class="facil-desc">Sport Field</span>
+                </div>
+                <div class="facil-block">
+                    <img class="facil-img" src="assets/facil-3.png" />
+                    <span class="facil-desc">Classroom</span>
+                </div>
+            </ul>
+        </div>
+        <hr/>
+    </section>
+    <!-- Facilitation End -->
+
+    <!-- Message -->
+    <section id="message-us">
+        <div class="container">
+            <h1>Message Us</h1>
+            <div class="row">
+                <div class="column">
+                    <div class="message-form">
+                        <form id="msg-form">
+                            <div class="row">
+                                <div class="column-l">
+                                    <label class="label-l" for="nama">Nama</label><br>
+                                    <label class="label-l" for="tanggal">Tanggal lahir</label><br>
+                                    <label class="label-l" for="kelamin">Jenis kelamin</label><br>
+                                    <label class="label-l" for="pesan">Pesan</label><br>
+                                </div>
+                                <div class="column-r">
+                                    <b>: </b><input class="label-r" type="text" id="nama" name="nama" placeholder="Nama"><br>
+                                    <b>: </b><input class="label-rd" type="date" id="tanggal" name="tanggal"><br>
+                                    <b>: </b>
+                                    <input class="radio-k" type="radio" id="laki" name="kelamin" value="laki">
+                                    <label for="laki">Laki-Laki</label>
+                                    <input class="radio-k" type="radio" id="perempuan" name="kelamin" value="perempuan">
+                                    <label for="perempuan">Perempuan</label><br>
+                                    <b>: </b><textarea rows="4" cols="35" name="pesan" form="usrform" placeholder="Pesan"></textarea>
+                                </div>
+                            </div>
+                            <input class="btn-submit" type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="message-show">
+                        <p>
+                            <b>Current time :</b>
+                            <br/>
+                            <br/>
+                            <b>Nama :</b>
+                            <br/>
+                            <b>Tanggal Lahir :</b>
+                            <br/>
+                            <b>Pesan :</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+    </section>
+
+    <!-- Message End -->
+
+    <!-- Footer -->
+    <footer>
+        <p>Created By Adri Antori</p>
+        <hr/>
+    </footer>
+    <!-- Footer End -->
+</body>
+
+</html>

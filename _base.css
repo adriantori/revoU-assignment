@@ -1,0 +1,61 @@
+body {
+    margin: 0px;
+}
+
+hr {
+    border-width: 3px;
+}
+
+.container {
+    margin-top: 8vh;
+    margin-bottom: 5vh;
+    padding-left: 10vw;
+}
+
+
+/* Navbar */
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.navicon {
+    height: 6vh;
+    padding-left: 1vw;
+    padding-top: 0.5vh;
+}
+
+.navitem {
+    float: right;
+    border: 1px solid black;
+    height: auto;
+}
+
+.navitem a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navitem a:hover {
+    background-color: #111;
+    color: yellow
+}
+
+.active {
+    background-color: rgb(2, 2, 26);
+    color: black;
+}
+
+
+/* Navbar End */
