@@ -27,7 +27,7 @@
     <section id="header">
         <div class="container">
             <div class="header">
-                <h2>Hi nama, Welcome To Website</h2>
+                <h2>Hi <span id="nama-header">User</span>, Welcome To Website</h2>
                 <h5>Ini adalah website latihan pertama</h5>
             </div>
         </div>
@@ -71,7 +71,7 @@
             <div class="row">
                 <div class="column">
                     <div class="message-form">
-                        <form id="msg-form">
+                        <form id="msg-form" name="msg-form" onsubmit="return validateForm()">
                             <div class="row">
                                 <div class="column-l">
                                     <label class="label-l" for="nama">Nama</label><br>
@@ -100,11 +100,13 @@
                             <b>Current time :</b>
                             <br/>
                             <br/>
-                            <b>Nama :</b>
+                            <b>Nama : <span id="sender-nama"></span></b>
                             <br/>
-                            <b>Tanggal Lahir :</b>
+                            <b>Tanggal Lahir : <span id="sender-tanggal"></span></b>
                             <br/>
-                            <b>Pesan :</b>
+                            <b>Jenis Kelamin : <span id="sender-kelamin"></span></b>
+                            <br/>
+                            <b>Pesan : <span id="sender-pesan"></span></b>
                         </p>
                     </div>
                 </div>
@@ -115,12 +117,40 @@
 
     <!-- Message End -->
 
-    <!-- Footer -->
-    <footer>
-        <p>Created By Adri Antori</p>
-        <hr/>
-    </footer>
-    <!-- Footer End -->
 </body>
+
+<!-- Footer -->
+<footer>
+    <p>Created By Adri Antori</p>
+    <hr/>
+</footer>
+<!-- Footer End -->
+<script>
+    var nama = prompt("Masukkan nama kamu");
+    document.getElementById("nama-header").innerText = nama;
+
+    function validateForm() {
+        var nama = document.forms['msg-form']['nama'].value;
+        var tanggal = document.forms['msg-form']['tanggal'].value;
+        var kelamin = document.forms['msg-form']['kelamin'].value;
+        var pesan = document.forms['msg-form']['pesan'].value;
+
+        if (nama == "" || tanggal == "" || kelamin == "" || pesan == "") {
+            alert("Input tidak boleh kosong");
+            return false;
+        }
+
+        setSenderUI(nama, tanggal, kelamin, pesan);
+        return false;
+    }
+
+    function setSenderUI(nama, tanggal, kelamin, pesan) {
+        document.getElementById("sender-nama").innerHTML = nama;
+        document.getElementById("sender-tanggal").innerHTML = tanggal;
+        document.getElementById("sender-kelamin").innerHTML = kelamin;
+        document.getElementById("sender-pesan").innerHTML = pesan;
+    }
+</script>
+
 
 </html>
