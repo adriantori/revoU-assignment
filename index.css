@@ -21,8 +21,6 @@ nav {
     width: 100%;
     height: auto;
     padding-bottom: 5vh;
-    border-color: black;
-    border-bottom: 10px;
 }
 
 .facil {
@@ -37,13 +35,13 @@ nav {
     display: inline-block;
     text-align: center;
     width: 15vw;
-    padding-right: 10vw;
+    padding-right: 12vw;
 }
 
 .facil-img {
     border-radius: 50%;
     width: 15vw;
-    height: 30vh;
+    height: auto;
 }
 
 .facil-desc {
@@ -55,8 +53,13 @@ nav {
     flex: 25%;
 }
 
+.column-mid {
+    flex: 2%;
+    line-height: 150%;
+}
+
 .column-r {
-    flex: 75%;
+    flex: 73%;
 }
 
 .message-show {
@@ -84,11 +87,17 @@ nav {
     width: 61%;
 }
 
+.label-p {
+    width: 60%;
+    margin-bottom: 2vh;
+    padding-bottom: 10vh;
+}
+
 .radio-k {
     display: inline-block
 }
 
 .btn-submit {
-    width: 75%;
+    width: 33vw;
     height: 5vh;
 }

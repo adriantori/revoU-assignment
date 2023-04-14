@@ -79,15 +79,20 @@
                                     <label class="label-l" for="kelamin">Jenis kelamin</label><br>
                                     <label class="label-l" for="pesan">Pesan</label><br>
                                 </div>
-                                <div class="column-r">
-                                    <b>: </b><input class="label-r" type="text" id="nama" name="nama" placeholder="Nama"><br>
-                                    <b>: </b><input class="label-rd" type="date" id="tanggal" name="tanggal"><br>
+                                <div class="column-mid">
+                                    <b>: </b><br/>
+                                    <b>: </b><br/>
+                                    <b>: </b><br/>
                                     <b>: </b>
+                                </div>
+                                <div class="column-r">
+                                    <input class="label-r" type="text" id="nama" name="nama" placeholder="Nama"><br>
+                                    <input class="label-rd" type="date" id="tanggal" placeholder="dd-mm-yyyy" name="tanggal"><br>
                                     <input class="radio-k" type="radio" id="laki" name="kelamin" value="laki">
                                     <label for="laki">Laki-Laki</label>
                                     <input class="radio-k" type="radio" id="perempuan" name="kelamin" value="perempuan">
                                     <label for="perempuan">Perempuan</label><br>
-                                    <b>: </b><textarea rows="4" cols="35" name="pesan" form="usrform" placeholder="Pesan"></textarea>
+                                    <input class="label-p" type="text" id="pesan" name="pesan" placeholder="Pesan"><br>
                                 </div>
                             </div>
                             <input class="btn-submit" type="submit" value="Submit">
@@ -97,16 +102,16 @@
                 <div class="column">
                     <div class="message-show">
                         <p>
-                            <b>Current time :<span id="sender-time"></span></b>
+                            <b>Current time :</b> <span id="sender-time"></span>
                             <br/>
                             <br/>
-                            <b>Nama : <span id="sender-nama"></span></b>
+                            <b>Nama :</b> <span id="sender-nama"></span>
                             <br/>
-                            <b>Tanggal Lahir : <span id="sender-tanggal"></span></b>
+                            <b>Tanggal Lahir :</b> <span id="sender-tanggal"></span>
                             <br/>
-                            <b>Jenis Kelamin : <span id="sender-kelamin"></span></b>
+                            <b>Jenis Kelamin :</b> <span id="sender-kelamin"></span>
                             <br/>
-                            <b>Pesan : <span id="sender-pesan"></span></b>
+                            <b>Pesan :</b> <span id="sender-pesan"></span>
                         </p>
                     </div>
                 </div>
@@ -126,32 +131,28 @@
 </footer>
 <!-- Footer End -->
 <script>
-    var nama = prompt("Masukkan nama kamu");
-    document.getElementById("nama-header").innerText = nama;
-
-    var today = new Date();
-    document.getElementById("sender-time").innerText = today;
+    var user = prompt("Masukkan nama kamu");
+    document.getElementById("nama-header").innerText = user;
 
     function validateForm() {
+        var today = new Date();
         var nama = document.forms['msg-form']['nama'].value;
         var tanggal = document.forms['msg-form']['tanggal'].value;
         var kelamin = document.forms['msg-form']['kelamin'].value;
         var pesan = document.forms['msg-form']['pesan'].value;
 
-        if (nama == "" || tanggal == "" || kelamin == "" || pesan == "") {
-            alert("Input tidak boleh kosong");
-            return false;
-        }
+        alert(nama);
+        var tanggalArr = tanggal.split("-");
+        var newTanggal = tanggalArr[2] + "-" + tanggalArr[1] + "-" + tanggalArr[0];
 
-        setSenderUI(nama, tanggal, kelamin, pesan);
-        return false;
-    }
+        var newToday = today.toString().slice(0, 33);
 
-    function setSenderUI(nama, tanggal, kelamin, pesan) {
+        document.getElementById("sender-time").innerText = newToday;
         document.getElementById("sender-nama").innerHTML = nama;
-        document.getElementById("sender-tanggal").innerHTML = tanggal;
+        document.getElementById("sender-tanggal").innerHTML = newTanggal;
         document.getElementById("sender-kelamin").innerHTML = kelamin;
         document.getElementById("sender-pesan").innerHTML = pesan;
+        return false;
     }
 </script>
 
