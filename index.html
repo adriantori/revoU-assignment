@@ -36,7 +36,11 @@
 
     <!-- Banner -->
     <section id="top-banner">
-        <img class="banner" src="assets/index/revou-banner.png" alt="revoU-banner" />
+        <img class="banner img-slideshow" src="assets/index/revou-banner.png" alt="revoU-banner" />
+        <img class="banner img-slideshow" src="assets/index/revou-banner.png" alt="revoU-banner" />
+        <img class="banner img-slideshow" src="assets/index/revou-banner.png" alt="revoU-banner" />
+        <button onclick="plusDivs(-1)">Previous</button>
+        <button onclick="plusDivs(1)">Next</button>
         <hr/>
     </section>
     <!-- Banner End -->
@@ -152,6 +156,30 @@
         document.getElementById("sender-kelamin").innerHTML = kelamin;
         document.getElementById("sender-pesan").innerHTML = pesan;
         return false;
+    }
+
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var imgList = document.getElementsByClassName("img-slideshow");
+        if (n > imgList.length) {
+            slideIndex = 1;
+        } else if (n < 1) {
+            slideIndex = imgList.length;
+        }
+        for (i = 0; i < imgList.length; i++) {
+            imgList[1].style.display = "none";
+        }
+
+        imgList[slideIndex - 1].style.display = "block";
+
+
     }
 </script>
 

@@ -30,7 +30,6 @@ footer p {
 
 .row {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .column {
@@ -84,3 +83,16 @@ footer p {
 
 
 /* Navbar End */
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .navitem {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navicon {
+        text-align: center;
+    }
+}
