@@ -37,6 +37,9 @@ footer p {
 }
 
 
+/* Flex divider */
+
+
 /* Navbar */
 
 .navbar {
@@ -52,15 +55,15 @@ footer p {
 }
 
 .navicon {
-    height: 6vh;
+    max-height: 5vh;
     padding-left: 1vw;
     padding-top: 0.5vh;
 }
 
 .navitem {
     float: right;
-    border: 1px solid black;
     height: auto;
+    width: auto;
 }
 
 .navitem a {
@@ -81,8 +84,73 @@ footer p {
     color: black;
 }
 
+.navtext {
+    display: none;
+}
+
 
 /* Navbar End */
+
+
+/* form */
+
+.message-show {
+    border: 2px;
+    border-style: solid;
+    width: 80%;
+    padding-top: 3vh;
+    padding-left: 5vh;
+    padding-bottom: 8vh;
+}
+
+.column-l {
+    flex: 25%;
+}
+
+.column-mid {
+    flex: 2%;
+    line-height: 150%;
+}
+
+.column-r {
+    flex: 73%;
+}
+
+.label-l {
+    line-height: 150%;
+}
+
+.label-r {
+    border-radius: 5px;
+    margin-bottom: 1vh;
+    width: 60%;
+}
+
+.label-rd {
+    border-radius: 5px;
+    margin-bottom: 1vh;
+    width: 61%;
+}
+
+.label-p {
+    width: 60%;
+    margin-bottom: 2vh;
+    padding-bottom: 10vh;
+    border: 2px;
+    border-style: solid;
+}
+
+.radio-k {
+    display: inline-block
+}
+
+.btn-submit {
+    width: 33vw;
+    height: 5vh;
+}
+
+
+/* form end*/
 
 @media only screen and (max-width: 600px) {
     .navbar {
@@ -93,6 +161,27 @@ footer p {
         flex-direction: column;
     }
     .navicon {
+        display: none;
+    }
+    .navtext {
+        display: block;
         text-align: center;
+        font-size: large;
+        color: yellow;
+    }
+    .header {
+        margin-top: 25vh;
+    }
+    .row-top {
+        flex-direction: column;
+    }
+    .message-form .btn-submit {
+        margin-top: 1vh;
+        width: 90%;
+    }
+    .message-show {
+        width: 75%;
+        flex-direction: column;
+        margin-top: 2vh;
     }
 }

@@ -15,6 +15,7 @@
     <section id="navbar">
         <ul class="navbar">
             <a href="index.html"><img class="navicon" src="assets/revou-icon.png" alt="revoU icon" /></a>
+            <a href="index.html" class="navtext">IT Community</a>
             <li class="navitem active"><a href="message.html">Message Us</a></li>
             <li class="navitem"><a href="achievement.html">Achievement</a></li>
             <li class="navitem"><a href="profile.html">Our Profile</a></li>
@@ -23,8 +24,76 @@
     </section>
     <!-- Navbar End -->
 
+    <!-- Message -->
+    <section id="message-us">
+        <div class="container">
+            <h1>Message Us</h1>
+            <div class="row row-top">
+                <div class="column">
+                    <div class="message-form">
+                        <form id="msg-form" name="msg-form" onsubmit="return validateForm()">
+                            <div class="row">
+                                <div class="column-l">
+                                    <label class="label-l" for="nama">Nama</label><br>
+                                    <label class="label-l" for="tanggal">Tanggal lahir</label><br>
+                                    <label class="label-l" for="kelamin">Jenis kelamin</label><br>
+                                    <label class="label-l" for="pesan">Pesan</label><br>
+                                </div>
+                                <div class="column-mid">
+                                    <b>: </b><br/>
+                                    <b>: </b><br/>
+                                    <b>: </b><br/>
+                                    <b>: </b>
+                                </div>
+                                <div class="column-r">
+                                    <input class="label-r" type="text" id="nama" name="nama" placeholder="Nama"><br>
+                                    <input class="label-rd" type="date" id="tanggal" placeholder="dd-mm-yyyy" name="tanggal"><br>
+                                    <input class="radio-k" type="radio" id="laki" name="kelamin" value="laki">
+                                    <label for="laki">Laki-Laki</label>
+                                    <input class="radio-k" type="radio" id="perempuan" name="kelamin" value="perempuan">
+                                    <label for="perempuan">Perempuan</label><br>
+                                    <input class="label-p" type="text" id="pesan" name="pesan" placeholder="Pesan"><br>
+                                </div>
+                            </div>
+                            <input class="btn-submit" type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Message End -->
+    <hr/>
+    <!-- API Output -->
+    <section id="APIoutput">
+        <div class="message-show">
+            GET Output :<br/>
+            <p>
+                nama=<span id="sender-nama"></span>&tanggal=<span id="sender-newTanggal"></span>&kelamin= <span id="sender-kelamin"></span>&pesan=<span id="sender-pesan"></span>
+            </p>
+        </div>
+    </section>
+    <!-- API Output End-->
 </body>
 
+<script>
+    function validateForm() {
+        var nama = document.forms['msg-form']['nama'].value;
+        var tanggal = document.forms['msg-form']['tanggal'].value;
+        var kelamin = document.forms['msg-form']['kelamin'].value;
+        var pesan = document.forms['msg-form']['pesan'].value;
 
+
+        var tanggalArr = tanggal.split("-");
+        var newTanggal = tanggalArr[2] + "-" + tanggalArr[1] + "-" + tanggalArr[0];
+
+
+        document.getElementById("sender-nama").innerHTML = nama;
+        document.getElementById("sender-newTanggal").innerHTML = newTanggal;
+        document.getElementById("sender-kelamin").innerHTML = kelamin;
+        document.getElementById("sender-pesan").innerHTML = pesan;
+        return false;
+    }
+</script>
 
 </html>

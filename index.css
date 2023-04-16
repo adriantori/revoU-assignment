@@ -17,55 +17,6 @@ nav {
     padding-top: 7vh;
 }
 
-
-/* Style the navigation menu */
-
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-}
-
-
-/* Hide the links inside the navigation menu (except for logo/home) */
-
-.topnav #myLinks {
-    display: none;
-}
-
-
-/* Style navigation menu links */
-
-.topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-}
-
-
-/* Style the hamburger menu */
-
-.topnav a.icon {
-    background: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-
-/* Add a grey background color on mouse-over */
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-
-/* Style the active link (or home/logo) */
-
 .active {
     background-color: #04AA6D;
     color: white;
@@ -104,6 +55,33 @@ nav {
     font-size: x-large;
 }
 
+.btn-next {
+    width: 20%;
+    height: auto;
+    text-align: center;
+    float: right;
+    margin-right: 2vw;
+}
+
+.btn-prev {
+    width: 20%;
+    height: auto;
+    text-align: center;
+    margin-left: 2vw;
+}
+
+
+/* form */
+
+.message-show {
+    border: 2px;
+    border-style: solid;
+    width: 80%;
+    padding-top: 3vh;
+    padding-left: 5vh;
+    padding-bottom: 8vh;
+}
+
 .column-l {
     flex: 25%;
 }
@@ -115,15 +93,6 @@ nav {
 
 .column-r {
     flex: 73%;
-}
-
-.message-show {
-    border: 2px;
-    border-style: solid;
-    width: 90%;
-    padding-top: 3vh;
-    padding-left: 5vh;
-    padding-bottom: 8vh;
 }
 
 .label-l {
@@ -146,6 +115,8 @@ nav {
     width: 60%;
     margin-bottom: 2vh;
     padding-bottom: 10vh;
+    border: 2px;
+    border-style: solid;
 }
 
 .radio-k {
@@ -156,3 +127,8 @@ nav {
     width: 33vw;
     height: 5vh;
 }
+
+
+/* form end*/
+
+@media only screen and (max-width: 600px) {}
