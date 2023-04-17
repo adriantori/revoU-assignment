@@ -1,5 +1,5 @@
 .container {
-    padding-top: 5vh;
+    padding-top: 22vh;
     text-align: center;
     font-size: 2em;
     padding-left: 0;
@@ -11,4 +11,24 @@
     height: 10%;
     text-align: center;
     background-color: red;
+}
+
+@media only screen and (max-width: 600px) {
+    .splash-text {
+        margin-top: 50vh;
+        font-size: 3em;
+    }
+    .switch1 {
+        display: none;
+    }
+    .switch2 {
+        display: contents;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .column {
+        width: 100%;
+        flex-direction: column;
+    }
 }

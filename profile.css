@@ -2,17 +2,6 @@
     font-size: 8em;
 }
 
-.prod-item-container {
-    height: 100%;
-    text-align: center;
-    font-size: 2em;
-}
-
-.prod-item {
-    width: 100%;
-    height: auto;
-}
-
 .center {
     margin-top: 35%;
     border: none;
@@ -22,6 +11,14 @@
     font-size: 3em;
     text-align: center;
     background-image: url("assets/profile/join-us-today.png");
+}
+
+.switch1 {
+    display: flex;
+}
+
+.switch2 {
+    display: none;
 }
 
 @media only screen and (max-width: 600px) {
@@ -35,5 +32,11 @@
     .column {
         width: 100%;
         flex-direction: column;
+    }
+    .switch1 {
+        display: none;
+    }
+    .switch2 {
+        display: contents;
     }
 }

@@ -36,8 +36,8 @@
                             <div class="row">
                                 <div class="column-l">
                                     <label class="label-l" for="nama">Nama</label><br>
-                                    <label class="label-l" for="tanggal">Tanggal lahir</label><br>
-                                    <label class="label-l" for="kelamin">Jenis kelamin</label><br>
+                                    <label class="label-l" for="email">Email</label><br>
+                                    <label class="label-l" for="telepon">Nomor Telepon</label><br>
                                     <label class="label-l" for="pesan">Pesan</label><br>
                                 </div>
                                 <div class="column-mid">
@@ -48,11 +48,8 @@
                                 </div>
                                 <div class="column-r">
                                     <input class="label-r" type="text" id="nama" name="nama" placeholder="Nama"><br>
-                                    <input class="label-rd" type="date" id="tanggal" placeholder="dd-mm-yyyy" name="tanggal"><br>
-                                    <input class="radio-k" type="radio" id="laki" name="kelamin" value="laki">
-                                    <label for="laki">Laki-Laki</label>
-                                    <input class="radio-k" type="radio" id="perempuan" name="kelamin" value="perempuan">
-                                    <label for="perempuan">Perempuan</label><br>
+                                    <input class="label-r" type="text" id="email" name="email" placeholder="Email"><br>
+                                    <input class="label-r" type="text" id="telepon" name="telepon" placeholder="Telepon"><br>
                                     <input class="label-p" type="text" id="pesan" name="pesan" placeholder="Pesan"><br>
                                 </div>
                             </div>
@@ -70,7 +67,10 @@
         <div class="message-show">
             GET Output :<br/>
             <p>
-                nama=<span id="sender-nama"></span>&tanggal=<span id="sender-newTanggal"></span>&kelamin= <span id="sender-kelamin"></span>&pesan=<span id="sender-pesan"></span>
+                nama=<span id="sender-nama"></span><br/> &email=
+                <span id="sender-email"></span><br/> &telepon=
+                <span id="sender-telepon"></span><br/> &pesan=
+                <span id="sender-pesan"></span>
             </p>
         </div>
     </section>
@@ -80,18 +80,15 @@
 <script>
     function validateForm() {
         var nama = document.forms['msg-form']['nama'].value;
-        var tanggal = document.forms['msg-form']['tanggal'].value;
-        var kelamin = document.forms['msg-form']['kelamin'].value;
+        var tanggal = document.forms['msg-form']['email'].value;
+        var kelamin = document.forms['msg-form']['telepon'].value;
         var pesan = document.forms['msg-form']['pesan'].value;
 
 
-        var tanggalArr = tanggal.split("-");
-        var newTanggal = tanggalArr[2] + "-" + tanggalArr[1] + "-" + tanggalArr[0];
-
 
         document.getElementById("sender-nama").innerHTML = nama;
-        document.getElementById("sender-newTanggal").innerHTML = newTanggal;
-        document.getElementById("sender-kelamin").innerHTML = kelamin;
+        document.getElementById("sender-email").innerHTML = tanggal;
+        document.getElementById("sender-telepon").innerHTML = kelamin;
         document.getElementById("sender-pesan").innerHTML = pesan;
         return false;
     }
