@@ -131,4 +131,16 @@ nav {
 
 /* form end*/
 
-@media only screen and (max-width: 600px) {}
+.about-us {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        margin-top: 40vh;
+    }
+    .facil-desc {
+        font-size: small;
+    }
+}
